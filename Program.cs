@@ -36,7 +36,8 @@ namespace FileParser
         // Loops until the user selects a valid option for log file path
         private static string GetFilePath()
         {
-            const string defaultPath = ".\\Logs\\sample_log.txt";
+            const string defaultPath = Path.Combine(AppContext.BaseDirectory, "Logs", "sample_log.txt");
+
 
             while (true)
             {
